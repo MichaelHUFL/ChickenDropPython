@@ -2,9 +2,9 @@
 # Date: 11/06/2025
 
 # | ----- Libraries ----- |
+import sys
 import pygame
 import random
-import sys
 
 # | ----- Initialize Game ----- |
 pygame.init()
@@ -29,14 +29,13 @@ startY = []
 speed = []
 
 while iterator < numOfEnemies:
-    startX.append(random.randint(0, width - enemy.get_width() + 1))
-    startY.append(0 - random.randint(enemy.get_height(), enemy.get_height() * 2))
-    speed.append(0.5) # <- SPEED
-    iterator += 1
+      startX.append(random.randint(0, width - enemy.get_width() + 1))
+      startY.append(0 - random.randint(enemy.get_height(), enemy.get_height() * 2))
+      speed.append(0.5)
+      iterator += 1
+replayscreen = False
 
 # | ----- Replay Screen ----- |
-replayScreen = False
-
 bigFont = pygame.font.SysFont("Comic Sans", 200)
 smallFont = pygame.font.SysFont("Comic Sans", 100)
 
